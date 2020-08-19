@@ -1,0 +1,624 @@
+//META{"name":"dimden.plex","description":"lighthex's dumb theme","author":"Lighthexagon","version":"1.0"}*//
+
+/*
+div[data-ref-id="guildsnav"] {
+	background:red;
+}*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@font-face {
+    font-family: 'Pixel NES';
+    font-synthesis: none;
+    src: url('https://dimden.dev/Pixel_NES.woff'), format('woff2');
+}
+
+:root {
+    --background-primary: rgba(255,255,255,0);
+    --background-secondary: rgba(255,255,255,0);
+    --background-tertiary: rgba(255,255,255,0);
+
+    --background-secondary-alt: rgba(255,255,255,0);
+    --background-accent: rgba(255,255,255,0);
+    
+    --background-message-hover: rgba(0, 0, 0, 0.2); /*bastards*/
+    --background-modifier-hover: rgba(201, 129, 129, 0);
+    --background-modifier-selected: hsla(206, 59%, 8%, 0.802);
+    --background-modifier-active: hsla(206, 59%, 8%, 0.802);
+
+    --message-padding: 10px;
+
+    --btn-bg: hsla(207, 61%, 3%, 0.80);
+    --btn-bg-hover: hsla(210, 40%, 8%, 0.8);
+
+    --semi-bg: hsla(206, 60%, 3%, 0.95);
+    --semi-bg-hover: hsla(210, 40%, 2%, 0.95);
+    --semi-dark-blue: hsl(206, 59%, 16%, 0.95);
+    --semi-dark-cyan: hsla(170, 53%, 37%, 0.8);
+    --semi-cyan: hsla(170, 82%, 58%, 0.8);
+    
+    --main-bg: hsl(207, 61%, 3%);
+    --main-dark-blue: #112c41;
+    --main-dark-cyan: hsl(170, 53%, 37%);
+    --main-cyan: #3CECCE;
+    --main-gray: #8e8e8e;
+
+    --name-hover: #b4b4b4;
+}
+
+::-webkit-input-placeholder, body, button, input, select, textarea {
+    font-family: Fira Sans, Helvetica;
+}
+
+.da-bg {
+    background-image: url("https://cdn.discordapp.com/attachments/603303568317087798/739923269662146560/unknown.png");
+    background-position: center; 
+    background-size: cover;
+}
+
+/* scanlines
+.da-bg::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background:linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+    z-index: 0;
+    background-size: 100% 4px, 100%;
+    pointer-events: none;
+}*/
+
+
+.da-layers {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* DM LIST */
+
+.da-listContent > .da-channel > .da-layout  {
+    border-radius: 0px;
+    border-bottom: 4px solid var(--main-dark-blue);
+    background-color: var(--btn-bg);
+}
+
+.da-listContent > .da-channel > .da-layout:hover {
+    background-color: var(--btn-bg-hover);
+}
+
+.da-listContent > .da-channel > .da-layout > .da-content > .da-nameAndDecorators > .da-name > div {
+    color: var(--main-cyan);
+}
+
+.da-listItemContents > .da-userInfo > .da-text > .da-nameTag > *{
+    color: var(--main-cyan);
+}
+
+.da-listItemContents > .da-userInfo > .da-text > .da-subtext {
+    color: var(--main-dark-cyan);
+}
+
+.da-listItemContents > .da-userInfo > .da-text > .da-subtext > .da-text{
+    color: var(--main-dark-cyan);
+}
+
+.da-listItemContents > .da-userInfo > .da-text > .da-subtext > .da-activity{
+    color: var(--main-dark-cyan);
+}
+
+
+/* FRIENDS LIST */
+
+.da-base > .da-content > .da-container {
+    background: transparent;
+}
+
+.da-peopleColumn > div > .da-listContent > .da-peopleListItem {
+    background: var(--btn-bg);
+    margin-top: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 0px;
+    border: none;
+    border-bottom: 4px solid var(--main-dark-blue);
+}
+
+.da-peopleColumn > div > .da-listContent > .da-peopleListItem:hover {
+    background: var(--btn-bg-hover);
+    border-bottom: 4px solid var(--main-dark-blue);
+}
+
+/* SERVER LIST */
+
+.da-pill > .da-item {
+    background: var(--main-cyan);
+    border-radius: 0px;
+}
+
+.childWrapper-anI2G9 {
+    background:var(--btn-bg);
+    color:var(--main-cyan);
+}
+
+.wrapper-1BJsBx.selected-bZ3Lue .childWrapper-anI2G9 {
+    background:var(--main-dark-blue);
+    color:var(--main-cyan);
+}
+
+/* CHANNEL LIST */
+
+.da-unreadBar {
+    color:var(--main-cyan);
+    background:var(--main-bg);
+    opacity: 1 !important;
+    border-radius: 0px;
+}
+
+.da-content > .da-sidebar {
+   /*background-color: rgb(27, 72, 52,0.9);*/
+}
+
+.da-iconVisibility > .da-unread {
+    background: var(--main-cyan);
+    border-radius: 0%;
+    height:28px;
+    width: 4px;
+    margin-top: -16px;
+    margin-left: 0px;
+}
+
+.da-iconVisibility > .da-content {
+    border-radius: 0px;
+    border-bottom: 4px solid var(--main-dark-blue);
+    background-color: var(--btn-bg);
+}
+
+.da-iconVisibility > .da-content > .da-name {
+    color: var(--main-cyan);
+    /*
+    font-family: 'Press Start 2P';
+    text-transform: uppercase;
+    font-size: 10pt;
+    */
+}
+
+.da-iconVisibility > .da-content > .da-icon {
+    color: white;
+}
+
+.da-iconVisibility:hover > .da-content > .da-name {
+    color: var(--main-dark-cyan);
+}
+
+.da-iconVisibility:hover > .da-content {
+    background: var(--btn-bg-hover);
+}
+
+.da-selected > .da-iconVisibility > .da-content > .da-name{
+    color:#ffffff;
+}
+
+.modeMuted-3osy7j > .da-content > .da-icon{
+    color:rgb(87, 87, 87);
+}
+/*
+.da-iconVisibility > .da-name {
+    color:white;
+}*/
+.containerDefault-3GGEv_ {
+    height:2em;
+}
+
+.da-draggable { /* uh oh, investigate side-effects */
+    margin-bottom: 4px;
+}
+
+.da-voiceUser > .da-content {
+    border-radius: 0px;
+    border-bottom: 4px solid var(--main-dark-blue);
+    
+    background-color: var(--btn-bg);
+}
+
+.da-voiceUser:hover > .da-content {
+    background-color: var(--btn-bg-hover) !important;
+}
+
+
+.da-voiceUser > .da-content > .da-icons > .da-iconSpacing > * > *{
+    color:var(--main-cyan);
+}
+
+/* CHAT */
+
+.da-jumpToPresentBar {
+    margin-bottom: 12px !important;
+}
+
+.da-newMessagesBar, .da-jumpToPresentBar {
+    border-radius: 0px;
+    border-bottom: 2px solid var(--main-dark-blue);
+    background: var(--semi-bg);
+    opacity: 1 !important;
+    padding: 4px;
+}
+
+.da-newMessagesBar:hover , .da-jumpToPresentBar:hover{
+    background: var(--semi-bg-hover);
+}
+
+
+.da-newMessagesBar > *, .da-jumpToPresentBar > * {
+    color:var(--main-cyan);
+}
+
+
+.da-newMessagesBar:hover > *, .da-jumpToPresentBar:hover > * {
+    color:var(--main-dark-cyan);
+}
+
+
+.da-channelTextArea > .da-webkit {
+    background: var(--main-bg);
+    border-radius: 0px;
+    border-bottom: 4px solid var(--main-dark-blue);
+}
+
+.da-cozyMessage > .da-buttonContainer > .da-container > .da-wrapper {
+    background: var(--btn-bg);
+    border-radius: 0px;
+    box-shadow: none;
+    
+}
+
+.da-cozyMessage > .da-buttonContainer > .da-container > .da-wrapper > .da-button {
+    border-radius: 0px;
+    border-bottom: 2px solid var(--main-dark-blue);
+}
+
+.da-cozyMessage > .da-buttonContainer > .da-container > .da-wrapper > .da-button:hover {
+    background: var(--btn-bg-hover);
+    
+    border-radius: 0px;
+}
+
+/*
+.da-groupStart.da-cozyMessage.da-zalgo {
+    margin-top: var(--message-padding);
+    padding-top: var(--message-padding);
+    padding-bottom: var(--message-padding);
+
+
+.da-cozyMessage.da-zalgo {
+    padding-bottom: var(--message-padding);
+    margin-top: -10px;
+}
+
+.da-message {
+    background: var(--btn-bg) !important;
+}
+
+.da-message:hover {
+    background: var(--btn-bg) !important;
+}
+
+
+.da-groupStart > .da-contents > .da-avatar {
+    margin-top: var(--message-padding);
+}*/
+
+.da-reaction {
+    background: var(--btn-bg);
+    border-bottom: 2px solid var(--main-dark-blue);
+    border-radius: 0px;
+}
+
+.da-reaction:hover,  .da-reaction.da-reactionMe {
+    background: var(--btn-bg-hover);
+}
+
+.da-reaction.da-reactionMe > div > .da-reactionInner > * {
+    color: var(--semi-dark-cyan);
+}
+
+.da-reaction > div > .da-reactionInner > * {
+    color: var(--main-cyan);
+}
+
+.da-hasMore {
+    background: var(--btn-bg);
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    color:var(--main-cyan);
+    margin-bottom: 20px;
+}
+
+.da-embed {
+    background: var(--btn-bg);
+    /*backdrop-filter: blur(5px);*/
+    border: 0px;
+    border-radius: 0px;
+    border-bottom: 4px solid;
+}
+
+.da-attachment {
+    background: var(--btn-bg);
+    /*backdrop-filter: blur(5px);*/
+    border-radius: 0px;
+    border-bottom: 4px solid var(--main-dark-blue);
+}
+
+.da-wrapperAudio {
+    background: var(--btn-bg) !important;
+    /*backdrop-filter: blur(5px);*/
+    border-radius: 0px;
+    border: 0px;
+    border-bottom: 4px solid var(--main-dark-blue) !important;
+}
+
+.da-divider.da-isUnread, .da-divider.da-hasContent {
+    border: 0px;
+    height: 24px;
+    margin-left: 4px;
+    margin-right: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.da-divider.da-hasContent {
+    border-bottom: 2px solid var(--main-dark-cyan);
+}
+
+.da-divider.da-hasContent > .da-content {
+    color: var(--main-dark-cyan);
+}
+
+.da-divider.da-isUnread {
+    border-bottom: 2px solid var(--main-cyan);
+}
+
+.da-isUnread::before {
+    content: "UNREAD MESSAGES";
+    color: var(--main-cyan);
+}
+
+.da-isUnread > .da-content::before {
+    content: " - ";
+    color: var(--main-cyan);
+}
+
+.da-isUnread > .da-content {
+    color: var(--main-cyan);
+    text-transform: uppercase;
+    margin: 0px;
+    padding-bottom: 0px;
+}
+
+.da-unreadPill {
+    visibility: hidden;
+}
+
+/* MEMBER LIST */
+
+.da-member > .da-layout {
+    border-radius: 0px;
+    border-bottom: 4px solid var(--main-dark-blue);
+    background-color: var(--btn-bg);
+}
+
+/* not redundant because of m y s t e r y  f l i c k e r */
+.da-member:hover > .da-layout {
+    background-color: var(--btn-bg-hover);
+}
+
+.da-layout > .da-content > .da-subText > * {
+    color: var(--main-dark-cyan)
+}
+
+.da-activity > .da-icon{
+    color: white;
+}
+
+/* POPOUTS/LAYERS & menus/buttons */
+
+/* dropdown lists --- */
+/* apparently dropdown lists are cursed, do not attempt to theme */
+
+/* emoji picker --- */
+
+.da-channelTextArea > section.da-positionContainer > .da-drawerSizingWrapper {
+    background: var(--main-dark-blue);
+}
+
+.da-channelTextArea > section.da-positionContainer > .da-drawerSizingWrapper > .da-contentWrapper {
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+
+
+#emoji-picker-tab-panel > .da-emojiPicker > .da-header {
+    background: var(--main-dark-blue);
+    border-radius: 0px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+#emoji-picker-tab-panel > .da-emojiPicker {
+    background: var(--semi-bg);
+}
+
+#emoji-picker-tab-panel > .da-wrapper {
+    background: var(--semi-bg);
+}
+
+#emoji-picker-tab-panel > .da-emojiPicker {
+    border-radius: 0px;
+}
+
+#emoji-picker-tab-panel > .da-emojiPicker > .da-bodyWrapper > div > div > div > div > div > .da-header {
+    background: var(--btn-bg);
+    border-bottom: 4px solid var(--main-dark-blue);
+    margin-bottom: 4px;
+}
+
+#emoji-picker-tab-panel > .da-emojiPicker > .da-bodyWrapper > div > div > div > div > div > .da-header > div > * {
+    color: var(--main-cyan);
+}
+
+/* pinned messages --- */
+
+#pinned-messages > .da-messagesPopoutWrap {
+    background: var(--semi-bg);
+    border-radius: 0px;
+}
+
+#pinned-messages > .da-messagesPopoutWrap > .da-header {
+    background: var(--main-dark-blue);
+}
+
+/* inbox --- */
+
+.da-recentMentionsPopout {
+    background: var(--semi-bg)
+}
+
+.da-recentMentionsPopout > .da-header {
+    background: var(--main-dark-blue)
+}
+
+/* userpopout --- */
+
+.da-userPopout {
+    border-radius: 0px;
+}
+
+.da-userPopout > .da-header {
+    background: var(--main-dark-blue);
+}
+
+.da-userPopout > .da-headerPlaying > .da-activity {
+    background: var(--main-dark-blue);
+}
+
+.da-role {
+    border-radius: 0px;
+    border: 0px solid;
+    padding: 0px;
+}
+
+.da-userPopout > .da-footer, .da-userPopout > .da-body {
+    background: var(--main-bg);
+}
+
+/* profile modal --- */
+
+.da-modal > .da-inner > .da-root {
+    background: var(--main-bg);
+    border-radius: 0px;
+    backdrop-filter: blur(5px);
+    /*border-bottom: 4px solid var(--main-dark-cyan);*/
+}
+
+.da-topSectionPlaying > .da-headerFill > .da-activityProfile{
+    background: var(--main-dark-blue);
+}
+
+/*selecting css classes be like*/
+.da-topSectionNormal > .da-header,  .da-topSectionPlaying > .da-header, .da-topSectionNormal > div > .da-activity, .da-topSectionPlaying > div > .da-activity {
+    background: var(--main-dark-blue);
+}
+
+/*
+.da-activity > .da-body > .da-content > * > a {
+    color:var(--main-cyan) !important;
+}*/
+
+.da-topSectionPlaying {
+    background: var(--main-dark-blue);
+}
+
+.da-tabBarContainer {
+    background: var(--main-dark-blue);
+    border:0px;
+}
+
+.da-tabBar > .da-tabBarItem {
+    border-bottom: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 0px;
+    margin-right: 16px;
+    /*border-bottom: 4px solid var(--main-gray) !important;*/
+}
+
+.da-tabBar > .da-tabBarItem:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.da-tabBar > .da-selected {
+    color: white !important;
+}
+
+.da-userInfoSection {
+    border: 0px !important;
+}
+
+.da-connectedAccount {
+    background: var(--btn-bg-hover);
+    border: 0px;
+    border-radius: 0px;
+    border-bottom: 4px solid var(--main-dark-blue);
+}
+
+.da-body > .da-listScroller > .da-listRow {
+    background: var(--btn-bg);
+    border: 0px;
+    border-radius: 0px;
+    border-bottom: 4px solid var(--main-dark-blue);
+    margin-bottom: 3px;
+    padding: 5px;
+}
+
+.da-body > .da-listScroller > .da-listRow:hover {
+    background: var(--btn-bg-hover);
+    border: 0px;
+    border-radius: 0px;
+    border-bottom: 4px solid var(--main-dark-blue);
+    margin-bottom: 3px;
+}
+
+/* scrollbarz */
+
+.da-scroller::-webkit-scrollbar-track-piece {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+/* meme */
+
+/*
+#guild-header-popout-leave, #guild-context-leave-guild {
+    display: none !important;
+    
+}*/
+
+/*i have no intention of making this look good- i mean i intended it to look shitty yes*/
+.da-preview > * > * > *{
+    text-indent: -9999px;
+    line-height: 0;
+}
+
+.da-preview > * > * > *::after {
+    content: "don't use light theme.";
+    text-indent: 0;
+    color:red;
+    display: block;
+    line-height: initial;/
+  }
