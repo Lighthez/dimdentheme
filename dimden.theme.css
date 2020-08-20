@@ -203,6 +203,10 @@ div[data-ref-id="guildsnav"] {
     color:#ffffff;
 }
 
+.da-selected > .da-iconVisibility > .da-content{
+    background: var(--btn-bg-hover);
+}
+
 .modeMuted-3osy7j > .da-content > .da-icon{
     color:rgb(87, 87, 87);
 }
